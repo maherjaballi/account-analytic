@@ -10,7 +10,7 @@
     'license': 'AGPL-3',
     'category': 'Tools',
     'depends': [
-        'base',
+        'account',
     ],
     'data': [        
         'views/res_config_settings_views.xml',       

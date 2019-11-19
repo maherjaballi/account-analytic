@@ -4,8 +4,8 @@ from openerp import api, fields, models, _
 
 class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
-    
-    module_account_analytic_distribution_required = fields.Boolean(string='account analytic distribution required',
+        
+    module_account_analytic_distribution_required = fields.Boolean(string='Account Analytic Distribution Required',
         help=' This module extends account_analytic_required and adds 2 policies to \n' 
               ' control the use of analytic distributions. The policies behave as follow \n' 
 
@@ -18,26 +18,26 @@ class ResConfigSettings(models.TransientModel):
               ' In any case analytic account and analytic distribution are mutually exclusive. \n'
              '-This installs the module account_analytic_distribution_required.')
     
-    module_account_analytic_parent = fields.Boolean(string='account analytic parent',
+    module_account_analytic_parent = fields.Boolean(string='Account Analytic Parent',
         help=' This module reintroduces the hierarchy to the analytic accounts as \n' 
               ' it was in previous versions of Odoo. This module is a base module for \n' 
               ' other modules to manage the hierarchy concept in analytics. \n' )
 
-    module_account_analytic_required = fields.Boolean(string='account analytic required',
+    module_account_analytic_required = fields.Boolean(string='Account Analytic Required',
         help='This module adds an option *analytic policy* on account types. \n'
             'You have the choice between 4 policies : *always*, *never*, *posted moves* and *optional*. \n')
 
-    module_account_analytic_sequence = fields.Boolean(string='account analytic sequence',
+    module_account_analytic_sequence = fields.Boolean(string='Account Analytic Sequence',
         help='This module restores the sequence for an analytic account\n'
              '-This installs the module account_analytic_sequence.')
 
 
-    module_analytic_base_department = fields.Boolean(string='analytic_base_department',
+    module_analytic_base_department = fields.Boolean(string='Analytic Base Department',
         help='This module add Department to Analytic Account lines. \n'
               'It will set current user by default on the lines. \n'
              '-This installs the module analytic_base_department . \n')
 
-    module_analytic_partner = fields.Boolean(string='analytic partner',
+    module_analytic_partner = fields.Boolean(string='Analytic Partner',
         help= 'This module adds a commercial partner on each analytic item for allowing to \n'
               'have another dimension for data analysis. \n'
 
@@ -45,12 +45,12 @@ class ResConfigSettings(models.TransientModel):
               'entries when validating invoices. \n'
               '-This installs the module analytic_partner .')
 
-    module_analytic_partner_hr_timesheet = fields.Boolean(string='analytic partner hr timesheet',
+    module_analytic_partner_hr_timesheet = fields.Boolean(string='Analytic Partner HR Timesheet',
         help='This module adds another partner on HR timesheets and propagate it to the \n'
               'auto-generated analytic entries on the "Other partner" field. \n'
              '-This installs the module analytic_partner_hr_timesheet .')
 
-    module_analytic_tag_dimension = fields.Boolean(string='analytic tag dimension',
+    module_analytic_tag_dimension = fields.Boolean(string='Analytic Tag Dimension',
         help=' This module allows to group Analytic Tags on Dimensions. \n' 
             ' Dimensions are created as custom field, then you can group by Dimensions on: \n' 
             ' * Account/Adviser/Journal Items \n' 
@@ -59,7 +59,7 @@ class ResConfigSettings(models.TransientModel):
             ' One Tag is only allowed on one Dimension, and you can not set more than one Tag from same Dimensions on Analytic Entry. \n'  
              '-This installs the module analytic_tag_dimension .')
 
-    module_mrp_analytic = fields.Boolean(string='mrp analytic',
+    module_mrp_analytic = fields.Boolean(string='MRP Analytic',
         help='This module links the manufacturing area with analytic management. \n'
               'For now, it adds analytic account configuration for manufacturing orders, \n'
               'and their corresponding shortcuts. Other modules can take advantage of \n'
